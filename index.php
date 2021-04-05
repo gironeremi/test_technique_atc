@@ -1,16 +1,41 @@
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-    </head>
-    <body>
-        <header>
-            <h1>Bienvenue!</h1>
-        </header>        
-        <section>
-
-        </section>
-        <footer>
-
-        </footer>
-    </body>
-</html>
+<?php
+session_start();
+require 'vendor/autoload.php';
+use App\Controller\Controller;
+use App\Controller\ErrorsController;
+use App\Controller\UsersController;
+use \App\Controller\AdminController;
+$action = "";
+$controller = new Controller();
+$usersController = new UsersController();
+$adminController = new AdminController();
+if (isset($_GET['action'])) {
+    $action = $controller->cleanVar($_GET['action']);
+}
+try {
+    switch ($action) {
+    /* USERS */
+            case 'register':
+            $usersController->register();
+            break;
+        case 'login':
+            $usersController->login();
+            break;
+        case 'userDashboard':
+            $usersController->userDashboard();
+            break;
+        case 'logout':
+            $usersController->logout();
+            break;
+    /* ADMIN */
+        case 'adminDashboard':
+            $adminController->adminDashboard();
+            break;
+        default:
+        $controller->home();
+    }
+}
+catch(Exception $e) {
+    $error = new ErrorsController();
+    $error->error($e);
+}

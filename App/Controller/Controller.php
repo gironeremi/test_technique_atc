@@ -1,7 +1,5 @@
 <?php
 namespace App\Controller;
-use App\Model\GamesManager;
-
 class Controller
 {
     public function cleanVar($str)

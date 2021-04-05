@@ -1,9 +1,6 @@
 <?php
 namespace App\Controller;
-use App\Model\EventsManager;
-use App\Model\PlayersManager;
 use App\Model\UsersManager;
-
 class UsersController extends Controller
 {
     public function register()

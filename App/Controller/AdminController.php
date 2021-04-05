@@ -1,7 +1,5 @@
 <?php
 namespace App\Controller;
-use App\Model\GamesManager;
-
 class AdminController extends Controller
 {
     public function adminDashboard()

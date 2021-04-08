@@ -32,7 +32,7 @@ try {
             $adminController->adminDashboard();
             break;
         default:
-        $controller->home();
+        $usersController->login();
     }
 }
 catch(Exception $e) {

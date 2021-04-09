@@ -19,7 +19,6 @@
 <?php if (!empty($content)) {
     echo $content;
 } ?>
-<?php require('footer.php');?>
 <script type="text/javascript" src="../public/js/main.js"></script>
 </body>
 </html>

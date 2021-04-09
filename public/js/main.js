@@ -3,5 +3,8 @@ const getPosition = async function () {
     let data = await response.json();
     const lat = data.location.lat;
     const lng = data.location.lng;
+    document.getElementById('lat').setAttribute("value", lat);
+    document.getElementById('lng').setAttribute("value", lng);
 }
-setInterval(getPosition, 60000);
+getPosition();
+//setInterval(getPosition, 60000);

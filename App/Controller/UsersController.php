@@ -5,11 +5,10 @@ class UsersController extends Controller
 {
     public function register()
     {
-        if(isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['passwordConfirm'])) {
+        if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['passwordConfirm'])) {
             $errors = array();
             $usersManager = new UsersManager();
             $username = $this->cleanVar($_POST['username']);
-            $email = $this->cleanVar($_POST['email']);
             $password = $this->cleanVar($_POST['password']);
             $passwordConfirm = $this->cleanVar($_POST['passwordConfirm']);
             if(empty($username) || !preg_match('/^[a-zA-Z0-9_]+$/', $username)) {
@@ -19,13 +18,6 @@ class UsersController extends Controller
             if ($userExists) {
                 $errors['username'] = 'Ce pseudonyme est dejà pris';
             }
-            if (empty($email) || !filter_var(($email),FILTER_VALIDATE_EMAIL)) {
-                $errors['email'] = "Cet e-mail n'est pas valide";
-            }
-            $emailExists = $usersManager->getUserByEmail($email);
-            if ($emailExists) {
-                $errors['email'] = "Cette adresse email est dejà utilisée";
-            }
             if (empty($password) || empty($passwordConfirm)) {
                 $errors['password'] = "Un mot de passe est manquant";
             }
@@ -34,8 +26,8 @@ class UsersController extends Controller
             }
             if (empty($errors)) {
                 $passwordHashed = password_hash($password, PASSWORD_DEFAULT);
-                $usersManager->addUser($username, $passwordHashed, $email);
-                $successMessage = 'Vous êtes à présent inscrit. Bienvenue chez "Rejoins Ma Table de Jeu"!';
+                $usersManager->addUser($username, $passwordHashed);
+                $successMessage = 'Vous êtes à présent inscrit. Bienvenue !';
                 require('View/template.php');
                 die();
             }
@@ -50,15 +42,15 @@ class UsersController extends Controller
             $password = $this->cleanVar($_POST['password']);
             $userExists = $usersManager->getUserByName($username);
             if (!$userExists) {
-                $errors['username'] = "Ce pseudonyme n'existe pas.";
+                $errors['username'] = "Ce nom d'utilisateur n'existe pas.";
             } elseif (!password_verify($password, $userExists['password'])) {
                 $errors['password'] = "Mot de passe incorrect!";
             }
             if (empty($errors)) {
                 $_SESSION['username'] = $username;
                 $_SESSION['user_id'] = $userExists['user_id'];
-                $_SESSION['role'] = $userExists['role'];
-                if ($_SESSION['role'] === 'admin') {
+                $_SESSION['role_id'] = $userExists['role_id'];
+                if ($_SESSION['role_id'] == 1) {
                     $adminController = new AdminController();
                     $adminController->adminDashboard();
                     die();
@@ -74,8 +66,8 @@ class UsersController extends Controller
     {
         session_destroy();
         unset($_SESSION['username']);
-        unset($_SESSION['userId']);
-        $successMessage = "Vous êtes bien déconnecté. Longue vie et prospérité!";
+        unset($_SESSION['user_id']);
+        $successMessage = "Vous êtes bien déconnecté. À bientôt!";
         require('View/template.php');
     }
     public function userDashboard()

@@ -19,12 +19,8 @@ ob_start(); ?>
     <h1>Inscription</h1>
     <form action="" method="post" class="col-md-8 m-3 p-3 shadow-sm">
         <div class="form-group">
-            <label for="username">Pseudonyme</label>
+            <label for="username">Nom d'utilisateur</label>
             <input type="text" name="username" class="form-control" maxlength="30" required />
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" name="email" class="form-control" maxlength="50" required />
         </div>
         <div class="form-group">
             <label for="password">Mot de Passe</label>

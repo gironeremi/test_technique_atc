@@ -8,7 +8,7 @@
         <ul class="navbar-nav mr-auto">
             <?php
                 if (isset($_SESSION['username'])) {
-                    if ($_SESSION['role'] === 'admin') {
+                    if ($_SESSION['role_id'] === 1) {
                     ?>
                         <li class="nav nav-item">
                         <a href="index.php?action=adminDashboard" class="nav-link">

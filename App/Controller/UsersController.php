@@ -76,6 +76,11 @@ class UsersController extends Controller
     {
         if (isset($_SESSION['user_id'])) {
             $userId = $_SESSION['user_id'];
+            $usersManager = new UsersManager();
+            if ($_SESSION['role_id'] == 2) {
+                $listUsers = $usersManager->listUsersByManager($userId);
+                $users = array_column($listUsers, 'username');
+            }
             require('View/userDashboardView.php');
         } else {
             throw new \Exception('Problème de connexion au tableau de bord');

@@ -1,11 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-lg">
+<nav class="navbar navbar-dark bg-primary shadow-lg d-flex">
     <a class="navbar-brand" href="index.php">Exo</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation" wfd-invisible="true">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarColor01">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav d-flex justify-content-center">
             <?php
                 if (isset($_SESSION['username'])) {
                     if ($_SESSION['role_id'] === 1) {
@@ -39,7 +34,6 @@
             <?php }
             ?>
         </ul>
-    </div>
 </nav>
 <?php if (!empty($successMessage)) {
     ?>

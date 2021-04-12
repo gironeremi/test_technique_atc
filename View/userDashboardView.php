@@ -7,16 +7,18 @@ ob_start(); ?>
     <?php
         if (isset($users)) {
     ?>
-    <ul class="list-group">
-    <h2>liste des utilisateurs</h2>
+    <div class="container">
+        <ul class="list-group">
+            <h2>liste des utilisateurs</h2>
     <?php
         foreach($users as $user) {
     ?>
-    <li class="list-group-item"><?= ucfirst(strtolower($user));  ?></li>
+            <li class="list-group-item"><?= ucfirst(strtolower($user));  ?></li>
     <?php
         }
     ?>
-    </ul>
+        </ul>
+    </div>
     <?php
         }
     ?>

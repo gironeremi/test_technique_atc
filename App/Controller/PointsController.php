@@ -20,4 +20,8 @@ class PointsController extends Controller
             
         
     }
+    public function listPoints()
+    {
+        
+    }
 }

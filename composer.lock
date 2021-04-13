@@ -4,8 +4,85 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "77df58f6cb1f7c6d65fd317a483c6675",
+    "content-hash": "f4080741cdad2007c5f8d85b1172be83",
     "packages": [
+        {
+            "name": "luracast/restler",
+            "version": "3.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Luracast/Restler.git",
+                "reference": "9dae9a4690e9e5d1b03fa33c7a22bb8390fbb326"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Luracast/Restler/zipball/9dae9a4690e9e5d1b03fa33c7a22bb8390fbb326",
+                "reference": "9dae9a4690e9e5d1b03fa33c7a22bb8390fbb326",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=5.4"
+            },
+            "conflict": {
+                "restler/framework": "3.*"
+            },
+            "require-dev": {
+                "behat/behat": "^3.8@dev",
+                "bshaffer/oauth2-server-php": "dev-master",
+                "ext-libxml": "*",
+                "guzzlehttp/guzzle": "^7.0@dev",
+                "illuminate/view": "^8",
+                "mustache/mustache": "dev-master",
+                "rize/uri-template": "dev-master",
+                "twig/twig": "^3"
+            },
+            "suggest": {
+                "behat/behat": "Behaviour driven development testing framework (see require-dev for details)",
+                "bshaffer/oauth2-server-php": "If you want to use OAuth2 for authentication",
+                "guzzle/guzzle": "RESTful api HTTP client framework (see require-dev for details)",
+                "illuminate/view": "If you want to use laravel blade templates with Html format",
+                "mustache/mustache": "If you want to use mustache/handlebar templates with Html format",
+                "rodneyrehm/plist": "If you need Apple plist binary/xml format",
+                "symfony/yaml": "If you need YAML format",
+                "twig/twig": "If you want to use twig templates with Html format",
+                "zendframework/zendamf": "If you need AMF format"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "v3": "v3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Luracast\\Restler\\": "vendor/Luracast/Restler"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1"
+            ],
+            "authors": [
+                {
+                    "name": "Luracast",
+                    "email": "arul@luracast.com"
+                }
+            ],
+            "description": "Restler is a simple and effective multi-format Web API Server framework written in PHP. Just deal with your business logic in php, Restler will take care of the REST!",
+            "homepage": "http://luracast.com/products/restler/",
+            "keywords": [
+                "api",
+                "framework",
+                "rest",
+                "server"
+            ],
+            "support": {
+                "issues": "https://github.com/Luracast/Restler/issues",
+                "source": "https://github.com/Luracast/Restler/tree/3.1.1"
+            },
+            "time": "2020-12-10T07:41:19+00:00"
+        },
         {
             "name": "tinymce/tinymce",
             "version": "5.4.1",
@@ -122,5 +199,5 @@
         "ext-mbstring": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }

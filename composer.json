@@ -17,6 +17,7 @@
   "require": {
     "ext-mbstring": "*",
     "tinymce/tinymce": "^5.4",
-    "twbs/bootstrap": "^4.5"
+    "twbs/bootstrap": "^4.5",
+    "luracast/restler": "^3.1"
   }
 }

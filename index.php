@@ -1,21 +1,28 @@
 <?php
 require 'vendor/autoload.php';
-session_start();
 use App\Controller\Controller;
 use App\Controller\ErrorsController;
 use App\Controller\UsersController;
 use \App\Controller\AdminController;
+use App\Controller\PointsController;
+
+session_start();
 $action = "";
 $controller = new Controller();
 $usersController = new UsersController();
 $adminController = new AdminController();
+$pointsController = new PointsController();
 if (isset($_GET['action'])) {
     $action = $controller->cleanVar($_GET['action']);
 }
 try {
     switch ($action) {
+    /* POINTS */
+        case 'addPoint':
+            $pointsController->addPoint();
+            break;
     /* USERS */
-            case 'register':
+        case 'register':
             $usersController->register();
             break;
         case 'login':

@@ -6,20 +6,11 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'd91c93856b23467a74eee4452a2f5f09dcd3daee',
+    'reference' => 'c94aeaeb06505a7fb60c57396a18e07ff7728b42',
     'name' => 'vendor_name/oc_project5',
   ),
   'versions' => 
   array (
-    'luracast/restler' => 
-    array (
-      'pretty_version' => '3.1.1',
-      'version' => '3.1.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '9dae9a4690e9e5d1b03fa33c7a22bb8390fbb326',
-    ),
     'nette/finder' => 
     array (
       'pretty_version' => 'v2.5.2',
@@ -49,27 +40,27 @@
     ),
     'tinymce/tinymce' => 
     array (
-      'pretty_version' => '5.4.1',
-      'version' => '5.4.1.0',
+      'pretty_version' => '5.7.1',
+      'version' => '5.7.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '940fdcfa7aa2ade09a1ec916dadeee01baa7787a',
+      'reference' => '8273fb332de43e7929b7b78c13c72b32871f7394',
     ),
     'twbs/bootstrap' => 
     array (
-      'pretty_version' => 'v4.5.3',
-      'version' => '4.5.3.0',
+      'pretty_version' => 'v4.6.0',
+      'version' => '4.6.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'a716fb03f965dc0846df479e14388b1b4b93d7ce',
+      'reference' => '6ffb0b48e455430f8a5359ed689ad64c1143fac2',
     ),
     'twitter/bootstrap' => 
     array (
       'replaced' => 
       array (
-        0 => 'v4.5.3',
+        0 => 'v4.6.0',
       ),
     ),
     'vendor_name/oc_project5' => 
@@ -79,7 +70,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'd91c93856b23467a74eee4452a2f5f09dcd3daee',
+      'reference' => 'c94aeaeb06505a7fb60c57396a18e07ff7728b42',
     ),
   ),
 );

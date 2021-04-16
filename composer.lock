@@ -4,85 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9c1fb32638bc92a9e792d5e54fea44cd",
+    "content-hash": "0d971ac4976c5f722232e64568d29481",
     "packages": [
-        {
-            "name": "luracast/restler",
-            "version": "3.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Luracast/Restler.git",
-                "reference": "9dae9a4690e9e5d1b03fa33c7a22bb8390fbb326"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Luracast/Restler/zipball/9dae9a4690e9e5d1b03fa33c7a22bb8390fbb326",
-                "reference": "9dae9a4690e9e5d1b03fa33c7a22bb8390fbb326",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "php": ">=5.4"
-            },
-            "conflict": {
-                "restler/framework": "3.*"
-            },
-            "require-dev": {
-                "behat/behat": "^3.8@dev",
-                "bshaffer/oauth2-server-php": "dev-master",
-                "ext-libxml": "*",
-                "guzzlehttp/guzzle": "^7.0@dev",
-                "illuminate/view": "^8",
-                "mustache/mustache": "dev-master",
-                "rize/uri-template": "dev-master",
-                "twig/twig": "^3"
-            },
-            "suggest": {
-                "behat/behat": "Behaviour driven development testing framework (see require-dev for details)",
-                "bshaffer/oauth2-server-php": "If you want to use OAuth2 for authentication",
-                "guzzle/guzzle": "RESTful api HTTP client framework (see require-dev for details)",
-                "illuminate/view": "If you want to use laravel blade templates with Html format",
-                "mustache/mustache": "If you want to use mustache/handlebar templates with Html format",
-                "rodneyrehm/plist": "If you need Apple plist binary/xml format",
-                "symfony/yaml": "If you need YAML format",
-                "twig/twig": "If you want to use twig templates with Html format",
-                "zendframework/zendamf": "If you need AMF format"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "v3": "v3.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Luracast\\Restler\\": "vendor/Luracast/Restler"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL-2.1"
-            ],
-            "authors": [
-                {
-                    "name": "Luracast",
-                    "email": "arul@luracast.com"
-                }
-            ],
-            "description": "Restler is a simple and effective multi-format Web API Server framework written in PHP. Just deal with your business logic in php, Restler will take care of the REST!",
-            "homepage": "http://luracast.com/products/restler/",
-            "keywords": [
-                "api",
-                "framework",
-                "rest",
-                "server"
-            ],
-            "support": {
-                "issues": "https://github.com/Luracast/Restler/issues",
-                "source": "https://github.com/Luracast/Restler/tree/3.1.1"
-            },
-            "time": "2020-12-10T07:41:19+00:00"
-        },
         {
             "name": "nette/finder",
             "version": "v2.5.2",
@@ -304,16 +227,16 @@
         },
         {
             "name": "tinymce/tinymce",
-            "version": "5.4.1",
+            "version": "5.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tinymce/tinymce-dist.git",
-                "reference": "940fdcfa7aa2ade09a1ec916dadeee01baa7787a"
+                "reference": "8273fb332de43e7929b7b78c13c72b32871f7394"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/940fdcfa7aa2ade09a1ec916dadeee01baa7787a",
-                "reference": "940fdcfa7aa2ade09a1ec916dadeee01baa7787a",
+                "url": "https://api.github.com/repos/tinymce/tinymce-dist/zipball/8273fb332de43e7929b7b78c13c72b32871f7394",
+                "reference": "8273fb332de43e7929b7b78c13c72b32871f7394",
                 "shasum": ""
             },
             "type": "component",
@@ -348,20 +271,23 @@
                 "tinymce",
                 "wysiwyg"
             ],
-            "time": "2020-07-08T04:08:07+00:00"
+            "support": {
+                "source": "https://github.com/tinymce/tinymce-dist/tree/5.7.1"
+            },
+            "time": "2021-03-17T01:43:23+00:00"
         },
         {
             "name": "twbs/bootstrap",
-            "version": "v4.5.3",
+            "version": "v4.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "a716fb03f965dc0846df479e14388b1b4b93d7ce"
+                "reference": "6ffb0b48e455430f8a5359ed689ad64c1143fac2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/a716fb03f965dc0846df479e14388b1b4b93d7ce",
-                "reference": "a716fb03f965dc0846df479e14388b1b4b93d7ce",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/6ffb0b48e455430f8a5359ed689ad64c1143fac2",
+                "reference": "6ffb0b48e455430f8a5359ed689ad64c1143fac2",
                 "shasum": ""
             },
             "replace": {
@@ -399,13 +325,17 @@
                 "sass",
                 "web"
             ],
+            "support": {
+                "issues": "https://github.com/twbs/bootstrap/issues",
+                "source": "https://github.com/twbs/bootstrap/tree/v4.6.0"
+            },
             "funding": [
                 {
                     "url": "https://opencollective.com/bootstrap",
                     "type": "open_collective"
                 }
             ],
-            "time": "2020-10-13T15:38:30+00:00"
+            "time": "2021-01-19T16:16:38+00:00"
         }
     ],
     "packages-dev": [],

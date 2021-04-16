@@ -3,8 +3,8 @@ const getPosition = async function () {
     let truc = await response.json();
     let lat = await truc.location.lat;
     let lng = await truc.location.lng;
-    let datetime = Date.now();
-    let object = {"location":
+    let datetime = Math.floor(Date.now() / 1000);
+    object = {"location":
     {
         "lat":lat,
         "lng":lng
@@ -18,10 +18,9 @@ const getPosition = async function () {
         console.log(this.responseText);
         }
     }
-    xmlhttp.open("POST", "../../points/add.php" , true);
+    xmlhttp.open("POST", "index.php?action=addPoint" , true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send(data);
-    console.log('plup!');
 }
 getPosition();
-//setInterval(getPosition, 60000);
+setInterval(getPosition, 1000);

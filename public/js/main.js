@@ -1,5 +1,5 @@
 const getPosition = async function () {
-    let response = await fetch('https://geo.ipify.org/api/v1?apiKey=at_3E4A75PgM0NwwL7oUwk0MTNmpNxCP');
+    let response = await fetch('https://geo.ipify.org/api/v1?apiKey=at_l3elHseb7Bj0krFxukdoK6M8erRaQ');
     let truc = await response.json();
     let lat = await truc.location.lat;
     let lng = await truc.location.lng;

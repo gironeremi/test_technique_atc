@@ -10,11 +10,11 @@ Une fois connecté, un processus de simulation d’envoi de point gps sera alors
 
 * Phase de connexion :
 
-Requête REST qui retournera un token pour effectuer les futures opérations
+[ ] Requête REST qui retournera un token pour effectuer les futures opérations
 
-* Une fois connecté un processus va faire une requête d’envoi de point gps toutes les x temps (ex :toute les  x secondes, minute…)  à définir
+[x] Une fois connecté un processus va faire une requête d’envoi de point gps toutes les x temps (ex :toute les  x secondes, minute…)  à définir
 
-* forme:
+[x] forme:
 
 ```
 {
@@ -30,15 +30,15 @@ Requête REST qui retournera un token pour effectuer les futures opérations
 
 * Coté back end :
 
-    * Mise en place d’une api rest avec les fonctions requises
-    * Base de données 
+     * [x] Mise en place d’une api rest avec les fonctions requises
+     * [x] Base de données 
         * Table user
         * Table points
         * (Table nécessaire à définir pour la structure de la bdd)
 
 **Précision:**
 
-* Niveau des utilisateurs:
+* [x] Niveau des utilisateurs:
     * Admin
     * Manager
     * Utilisateur lambda
@@ -49,5 +49,6 @@ Requête REST qui retournera un token pour effectuer les futures opérations
 
 **Dans cet exercice, il y a deux managers qui ont chacun des users différents, mais deux d'entre eux sont visibles des deux managers.**
 
-* Le serveur reçoit les requêtes toutes les 1 seconde. Tout doit être logué et le serveur doit calculer le nombre d'heures de chaque user par jour. (Réfléchir à la visualisation des données)
-* Sortir un rapport journalier des users et par Manager.
+* [x] Le serveur reçoit les requêtes toutes les 1 seconde.
+* [] Tout doit être logué et le serveur doit calculer le nombre d'heures de chaque user par jour. (Réfléchir à la visualisation des données)
+* [] Sortir un rapport journalier des users et par Manager.

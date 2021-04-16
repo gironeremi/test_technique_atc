@@ -29,7 +29,13 @@ class PointsController extends Controller
             }
         } else {
             http_response_code(405);
-            echo json_encode(["message" => "La méthode n'est pas autorisée"]);
+            echo json_encode(["message" => "This method is not authorized."]);
         }
+    }
+    public function listPointsByUserId()
+    {
+        $userId = $_SESSION['user_id'];
+        $pointsManager = new PointsManager();
+        $pointsManager->listPointsByUserId($userId);
     }
 }

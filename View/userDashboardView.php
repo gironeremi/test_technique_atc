@@ -23,7 +23,10 @@ ob_start(); ?>
         }
     ?>
 </div>
-
+<div>
+<p>Temps de connexion:<br />
+</p>
+</div>
 <script type="text/javascript" src="../public/js/main.js"></script>
 <?php $content = ob_get_clean();
 require('template.php'); ?>

@@ -1,6 +1,7 @@
 <?php
 namespace App\Controller;
 
+use App\Model\PointsManager;
 use App\Model\UsersManager;
 
 class AdminController extends Controller
@@ -11,6 +12,8 @@ class AdminController extends Controller
             $usersManager = new UsersManager();
             $listUsers = $usersManager->listUsers();
             $users = array_column($listUsers, 'username');
+            $pointsManager = new PointsManager();
+            $points = $pointsManager->listPoints();
             require('View/adminDashboardView.php');
         } else {
             throw new \Exception('Accès non autorisé!');

@@ -1,5 +1,7 @@
 <?php
 namespace App\Controller;
+
+use App\Model\PointsManager;
 use App\Model\UsersManager;
 class UsersController extends Controller
 {
@@ -81,6 +83,9 @@ class UsersController extends Controller
                 $listUsers = $usersManager->listUsersByManager($userId);
                 $users = array_column($listUsers, 'username');
             }
+            $pointsManager = new PointsManager();
+            $listPoints = $pointsManager->listPointsByUserId($userId);
+            $duration = count($listPoints);
             require('View/userDashboardView.php');
         } else {
             throw new \Exception('Problème de connexion au tableau de bord');

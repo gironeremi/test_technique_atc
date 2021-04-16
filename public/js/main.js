@@ -14,8 +14,8 @@ const getPosition = async function () {
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-        console.log(data);
-        console.log(this.responseText);
+        //console.log(data);
+        //console.log(this.responseText);
         }
     }
     xmlhttp.open("POST", "index.php?action=addPoint" , true);

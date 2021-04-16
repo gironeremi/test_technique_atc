@@ -1,7 +1,0 @@
-# behat.yml
-default:
-  suites:
-    default:
-      contexts:
-        - RestContext:
-            - http://localhost/r3/

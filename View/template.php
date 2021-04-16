@@ -19,6 +19,5 @@
 <?php if (!empty($content)) {
     echo $content;
 } ?>
-<script type="text/javascript" src="../public/js/main.js"></script>
 </body>
 </html>

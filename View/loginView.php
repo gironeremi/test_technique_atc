@@ -22,8 +22,6 @@ ob_start(); ?>
             <label for="username">Pseudo</label>
             <input type="text" name="username" class="form-control" maxlength="30" required />
         </div>
-        <input type="hidden" name="lat" id="lat" value=""/>
-        <input type="hidden" name="lng" id="lng" value=""/>
         <div class="form-group">
             <label for="password">Mot de Passe</label>
             <input type="password" name="password" class="form-control" maxlength="30" required />

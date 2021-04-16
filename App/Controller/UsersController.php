@@ -50,8 +50,8 @@ class UsersController extends Controller
                 $_SESSION['username'] = $username;
                 $_SESSION['user_id'] = $userExists['user_id'];
                 $_SESSION['role_id'] = $userExists['role_id'];
-                $pointsController = new PointsController();
-                $pointsController->addPoint();
+                //$pointsController = new PointsController();
+                //$pointsController->addPoint();
                 if ($_SESSION['role_id'] == 1) {
                     $adminController = new AdminController();
                     $adminController->adminDashboard();

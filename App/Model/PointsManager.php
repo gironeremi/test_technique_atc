@@ -2,11 +2,11 @@
 namespace App\Model;
 class PointsManager extends Manager
 {
-    public function addPoint($userId, $lat, $lng)
+    public function addPoint($userId, $lat, $lng, $date)
     {
         $db = $this->getDbConnect();
-        $req = $db->prepare('INSERT INTO points SET user_id = ?, latitude = ?, longitude = ?');
-        $req->execute(array($userId, $lat, $lng));
+        $req = $db->prepare('INSERT INTO points SET user_id = ?, latitude = ?, longitude = ?, datetime = ?');
+        $req->execute(array($userId, $lat, $lng, $date));
     }
     public function listPoints($managerId) {
         $db = $this->getDbConnect();
